@@ -1,0 +1,81 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.centre{
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+h1{
+  margin-top: -30px;
+}
+
+/* Form box  */
+.login-form {
+  background: white;
+  padding: 50px;
+  border-radius: 10px;
+  width: 50%;
+  height: 80vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.login-form input:focus{
+  background: #e0e0ff;
+  outline: none;
+}
+
+
+.input-text{
+  width: 100%;
+  margin-top: 10px;
+}
+
+label{
+  font-weight: 700;
+}
+
+button{
+  padding: 10px 30px;
+  border: none;
+}
+
+.login{
+  background: #44be79;
+}
+
+.close{
+  background: #ff4242;
+}
+
+.login:hover{
+  background: #008000;
+  transition: 0.3s;
+  color: white;
+}
+
+.close:hover{
+  background: red;
+  transition: 0.3s;
+  color: white;
+} 
