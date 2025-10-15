@@ -23,7 +23,6 @@ function ComplexApp() {
           Sign in
         </button>
 
-        {/* menu icon - open sidebar */}
         <img
           className="menu-icon"
           src="src/images/menu-icon.png"
@@ -32,7 +31,6 @@ function ComplexApp() {
         />
       </header>
 
-      {/* sidebar */}
       <nav className={`sidebar ${sidebarOpen ? "show" : ""}`}>
         <img
           className="close-icon"
