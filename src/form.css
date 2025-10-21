@@ -4,78 +4,134 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* ✅ Always above everything */
+  z-index: 9999;
+
+  /* ✅ Fade-in animation */
+  animation: fadeIn 0.4s ease forwards;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.centre{
-  text-align: center;
-  margin-bottom: -10px;
+/* ===== Animation Keyframes ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(4px);
+  }
 }
 
-h1{
-  margin-top: -30px;
-}
-
-/* Form box  */
+/* ===== Login Form ===== */
 .login-form {
   background: white;
   padding: 50px;
   border-radius: 10px;
   width: 50%;
-  height: 80vh;
+  height: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   gap: 15px;
+  z-index: 10000;
+
+  /* ✅ Slide-in effect */
+  animation: slideUp 0.4s ease forwards;
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 5;
+  }
+}
+
+/* ===== Text Styles ===== */
+.centre {
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+h1 {
+  margin-top: -10px;
+}
+
+/* ===== Input Styles ===== */
 .login-form input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-
-.login-form input:focus{
+.login-form input:focus {
   background: #e0e0ff;
   outline: none;
 }
 
-
-.input-text{
+.input-text {
   width: 100%;
   margin-top: 10px;
 }
 
-label{
+label {
   font-weight: 700;
 }
 
-button{
+/* ===== Buttons ===== */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+button {
   padding: 10px 30px;
   border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.login{
+.login {
   background: #44be79;
+  color: white;
 }
 
-.close{
+.close {
   background: #ff4242;
+  color: white;
 }
 
-.login:hover{
+.login:hover {
   background: #008000;
-  transition: 0.3s;
-  color: white;
+  transform: scale(1.05);
 }
 
-.close:hover{
+.close:hover {
   background: red;
-  transition: 0.3s;
-  color: white;
-} 
+  transform: scale(1.05);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .login-form {
+    width: 90%;
+    padding: 30px;
+  }
+}
